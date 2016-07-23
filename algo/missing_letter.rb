@@ -3,7 +3,13 @@
 # bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 
 def find_missing_letter(range)
+  incmplt_rng_ary = range.split(//)
+  cmplt_range_ary = (incmplt_rng_ary.first..incmplt_rng_ary.last).to_a
+  answer = (cmplt_range_ary - incmplt_rng_ary)
 
+  if answer.count > 0
+    answer.join
+  end
 end
 
 # Driver code - don't touch anything below this line.
